@@ -1,16 +1,21 @@
 {
   "name": "trueconf",
   "version": "1.0.0",
-  "description": "",
+  "description": "Тестовое задание для trueConf",
   "main": "index.js",
-  "scripts": {
-    "start": "npx tsc index.ts",
-    "test": "node index.js"
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atlszxc/trueConfTZ"
   },
   "keywords": [],
-  "author": "",
+  "author": "alltimelowskill",
   "license": "ISC",
   "devDependencies": {
     "typescript": "^5.1.6"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/atlszxc/trueConfTZ/issues"
+  },
+  "homepage": "https://github.com/atlszxc/trueConfTZ#readme"
 }
