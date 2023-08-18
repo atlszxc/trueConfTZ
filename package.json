@@ -1,6 +1,6 @@
 {
   "name": "trueconf",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Тестовое задание для trueConf",
   "main": "index.js",
   "scripts": {},
