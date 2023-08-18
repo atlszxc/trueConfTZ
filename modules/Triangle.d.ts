@@ -16,7 +16,7 @@ export declare class Triangle implements IShape {
     private base;
     private sideA;
     private sideB;
-    private hight;
+    private height;
     private cornerAlpha;
     private cornerBeta;
     private cornerGamma;

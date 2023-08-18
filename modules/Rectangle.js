@@ -11,7 +11,7 @@ var Rectangle = /** @class */ (function () {
      * @param w - длина прямоугольника
      */
     function Rectangle(h, w) {
-        this.hight = h,
+        this.height = h,
             this.width = w;
     }
     /**
@@ -20,7 +20,7 @@ var Rectangle = /** @class */ (function () {
      * @returns Площадь прямоуголька
      */
     Rectangle.prototype.getArea = function () {
-        return this.hight * this.width;
+        return this.height * this.width;
     };
     /**
      * Метод расчета периметра прямоугольника
@@ -28,7 +28,7 @@ var Rectangle = /** @class */ (function () {
      * @returns Периметр прямоуголька
      */
     Rectangle.prototype.getPerimeter = function () {
-        return 2 * (this.hight + this.width);
+        return 2 * (this.height + this.width);
     };
     /**
      * Метод обновления высоты прямоугольника
@@ -37,8 +37,8 @@ var Rectangle = /** @class */ (function () {
      * @returns Обнавленная высота прямоугольника
      */
     Rectangle.prototype.setHeight = function (h) {
-        this.hight = h;
-        return this.hight;
+        this.height = h;
+        return this.height;
     };
     /**
      * Метод обновления длины прямоугольника
@@ -58,7 +58,7 @@ var Rectangle = /** @class */ (function () {
      */
     Rectangle.prototype.setWidthAndHeight = function (h, w) {
         this.width = w;
-        this.hight = h;
+        this.height = h;
     };
     /**
      * Метод получения длин сторон прямоугольника
@@ -68,9 +68,9 @@ var Rectangle = /** @class */ (function () {
     Rectangle.prototype.getSides = function () {
         return {
             sideA: this.width,
-            sideB: this.hight,
+            sideB: this.height,
             sideC: this.width,
-            sideD: this.hight,
+            sideD: this.height,
         };
     };
     /**
@@ -90,8 +90,8 @@ var Rectangle = /** @class */ (function () {
                 ctx.beginPath();
                 ctx.moveTo(startPositionX, startPositionY);
                 ctx.lineTo(startPositionX + this.width, startPositionY);
-                ctx.lineTo(startPositionX + this.width, startPositionY + this.hight);
-                ctx.lineTo(startPositionX, startPositionY + this.hight);
+                ctx.lineTo(startPositionX + this.width, startPositionY + this.height);
+                ctx.lineTo(startPositionX, startPositionY + this.height);
                 ctx.lineTo(startPositionX, startPositionY);
                 ctx.stroke();
                 ctx.closePath();

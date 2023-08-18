@@ -22,13 +22,13 @@ export class Triangle implements IShape {
         this.cornerBeta = beta
         this.cornerGamma = gamma
 
-        this.hight = this.sideA * Math.sin(alpha / 180 * Math.PI)
+        this.height = this.sideA * Math.sin(alpha / 180 * Math.PI)
     }
 
     private base: number
     private sideA: number
     private sideB: number
-    private hight: number
+    private height: number
 
     private cornerAlpha: number
     private cornerBeta: number
@@ -40,7 +40,7 @@ export class Triangle implements IShape {
      * @returns Площадь приугольника
      */
     getArea(): number {
-        return (this.sideA * this.hight) / 2
+        return (this.sideA * this.height) / 2
     }
 
     /**
@@ -72,7 +72,7 @@ export class Triangle implements IShape {
         this.cornerGamma = gamma
 
         //Учтен перевод из радиан к занчениям из таблицы Брадиса
-        this.hight = this.sideA * Math.sin(alpha / 180 * Math.PI)
+        this.height = this.sideA * Math.sin(alpha / 180 * Math.PI)
     }
 
     /**
@@ -103,8 +103,8 @@ export class Triangle implements IShape {
                 ctx.beginPath()
                 ctx.moveTo(startPositionX, startPositionY)
                 ctx.lineTo(startPositionX + this.base, startPositionY)
-                ctx.lineTo((startPositionX + this.base) - Math.sqrt(Math.pow(this.sideB, 2) - Math.pow(this.hight, 2)) ,this.hight)
-                ctx.lineTo(((startPositionX + this.base) - Math.sqrt(Math.pow(this.sideB, 2) - Math.pow(this.hight, 2))) - Math.sqrt(Math.pow(this.sideA, 2) - Math.pow(this.hight, 2)) , startPositionY)
+                ctx.lineTo((startPositionX + this.base) - Math.sqrt(Math.pow(this.sideB, 2) - Math.pow(this.height, 2)) ,this.height)
+                ctx.lineTo(((startPositionX + this.base) - Math.sqrt(Math.pow(this.sideB, 2) - Math.pow(this.height, 2))) - Math.sqrt(Math.pow(this.sideA, 2) - Math.pow(this.height, 2)) , startPositionY)
                 ctx.stroke()
                 ctx.closePath()
             }

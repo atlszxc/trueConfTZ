@@ -11,11 +11,11 @@ export class Rectangle implements IShape {
      * @param w - длина прямоугольника
      */
     constructor(h: number, w: number) {
-        this.hight = h,
+        this.height = h,
         this.width = w
     }
 
-    private hight: number
+    private height: number
     private width: number
 
     /**
@@ -24,7 +24,7 @@ export class Rectangle implements IShape {
      * @returns Площадь прямоуголька
      */
     getArea(): number {
-        return this.hight * this.width
+        return this.height * this.width
     }
 
 
@@ -34,7 +34,7 @@ export class Rectangle implements IShape {
      * @returns Периметр прямоуголька
      */
     getPerimeter(): number {
-        return 2 * (this.hight + this.width)
+        return 2 * (this.height + this.width)
     }
 
     /**
@@ -44,8 +44,8 @@ export class Rectangle implements IShape {
      * @returns Обнавленная высота прямоугольника
      */
     setHeight(h: number): number {
-        this.hight = h
-        return this.hight
+        this.height = h
+        return this.height
     }
 
     /**
@@ -67,7 +67,7 @@ export class Rectangle implements IShape {
      */
     setWidthAndHeight(h: number, w: number): void {
         this.width = w
-        this.hight = h
+        this.height = h
     }
 
     /**
@@ -78,9 +78,9 @@ export class Rectangle implements IShape {
     getSides(): getSidesResponse {
         return {
             sideA: this.width,
-            sideB: this.hight,
+            sideB: this.height,
             sideC: this.width,
-            sideD: this.hight,
+            sideD: this.height,
         }
     }
 
@@ -99,8 +99,8 @@ export class Rectangle implements IShape {
                 ctx.beginPath()
                 ctx.moveTo(startPositionX, startPositionY)
                 ctx.lineTo(startPositionX + this.width, startPositionY)
-                ctx.lineTo(startPositionX + this.width, startPositionY + this.hight)
-                ctx.lineTo(startPositionX, startPositionY + this.hight)
+                ctx.lineTo(startPositionX + this.width, startPositionY + this.height)
+                ctx.lineTo(startPositionX, startPositionY + this.height)
                 ctx.lineTo(startPositionX, startPositionY)
                 ctx.stroke()
                 ctx.closePath()

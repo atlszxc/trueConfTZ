@@ -9,7 +9,7 @@ export declare class Rectangle implements IShape {
      * @param w - длина прямоугольника
      */
     constructor(h: number, w: number);
-    private hight;
+    private height;
     private width;
     /**
      * Метод расчета площади прямоугольника

@@ -24,7 +24,7 @@ var Triangle = /** @class */ (function () {
         this.cornerAlpha = alpha;
         this.cornerBeta = beta;
         this.cornerGamma = gamma;
-        this.hight = this.sideA * Math.sin(alpha / 180 * Math.PI);
+        this.height = this.sideA * Math.sin(alpha / 180 * Math.PI);
     }
     /**
      * Метод расчета площади треугольника
@@ -32,7 +32,7 @@ var Triangle = /** @class */ (function () {
      * @returns Площадь приугольника
      */
     Triangle.prototype.getArea = function () {
-        return (this.sideA * this.hight) / 2;
+        return (this.sideA * this.height) / 2;
     };
     /**
      * Метод расчета периметра тругольника
@@ -63,7 +63,7 @@ var Triangle = /** @class */ (function () {
         this.cornerBeta = beta;
         this.cornerGamma = gamma;
         //Учтен перевод из радиан к занчениям из таблицы Брадиса
-        this.hight = this.sideA * Math.sin(alpha / 180 * Math.PI);
+        this.height = this.sideA * Math.sin(alpha / 180 * Math.PI);
     };
     /**
      * Метод получения сторон треугольника
@@ -94,8 +94,8 @@ var Triangle = /** @class */ (function () {
                 ctx.beginPath();
                 ctx.moveTo(startPositionX, startPositionY);
                 ctx.lineTo(startPositionX + this.base, startPositionY);
-                ctx.lineTo((startPositionX + this.base) - Math.sqrt(Math.pow(this.sideB, 2) - Math.pow(this.hight, 2)), this.hight);
-                ctx.lineTo(((startPositionX + this.base) - Math.sqrt(Math.pow(this.sideB, 2) - Math.pow(this.hight, 2))) - Math.sqrt(Math.pow(this.sideA, 2) - Math.pow(this.hight, 2)), startPositionY);
+                ctx.lineTo((startPositionX + this.base) - Math.sqrt(Math.pow(this.sideB, 2) - Math.pow(this.height, 2)), this.height);
+                ctx.lineTo(((startPositionX + this.base) - Math.sqrt(Math.pow(this.sideB, 2) - Math.pow(this.height, 2))) - Math.sqrt(Math.pow(this.sideA, 2) - Math.pow(this.height, 2)), startPositionY);
                 ctx.stroke();
                 ctx.closePath();
             }
